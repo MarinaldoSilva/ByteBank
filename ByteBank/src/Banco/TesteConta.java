@@ -10,6 +10,13 @@ public class TesteConta {
 		System.out.println(contaMario.getTotalDeContas());
 		System.out.println(contaMario.getTitular().getCpf());
 		
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
+		Gerente teste = new Gerente("Mari","70099007444");
+		teste.setSalario(5000);
+		System.out.println(teste.getBonificacao());
 		
 	}
 }
