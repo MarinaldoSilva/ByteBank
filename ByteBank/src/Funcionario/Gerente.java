@@ -1,15 +1,15 @@
-package Banco;
+package Funcionario;
 
-public class Gerente extends Funcionario{
+public class Gerente extends FuncionarioAutenticado{
 	
 	public Gerente(String nome, String cpf){
-		this.setNome(nome);
-		this.setCpf(cpf);
+		super(nome, cpf);
 	}
 	
 	private String senha;//como não definida a senha padrão é '0' zero;
 	
 	public double getBonificacao() {
+		//recebe o salario como bonus + % de bonus padrão de funcionario
 		return (super.getBonificacao()) + super.getSalario();
 	}
 	

@@ -1,6 +1,9 @@
 package Banco;
 
-public class Conta {
+import Cliente.Cliente;
+
+public abstract class Conta {
+	
 	private int numeroConta;
 	private int agencia;
 	private double saldo;
@@ -8,35 +11,27 @@ public class Conta {
 	private static int totalDeContas;
 	
 	public Conta(int numeroConta, int agencia) {
-		totalDeContas++;
-		if(numeroConta <= 0 || agencia <= 0) {
-			System.out.println("Agencia Não pode ser igual ou menor que zero");
-			return;
-		}else{
+		if(numeroConta >= 0 || agencia >= 0) {
 			this.agencia = agencia;
 			this.numeroConta = numeroConta;
+			totalDeContas++;
+		}else{
+			System.out.println("Agencia Não pode ser igual ou menor que zero");
+			return;
 		}	
-		this.titular = titular;
 	}
 	
-	void deposita(double valor) {
-		if(valor > 0.1) {
-			this.saldo+=valor;
+	boolean deposita(double valor) {
+		if(valor >= 0.1) {
+			this.saldo += valor;
+			return true;
 		}else {
 			erroSaldo();
-		}
-	}
-	
-	boolean verificaSaldoNegativo(double valor){
-		if(this.saldo < valor ) {
-			System.out.println("Saldo insuficiente.");
 			return false;
 		}
-			this.saldo += valor;
-			return false;
 	}
-	
-	boolean retiraDinheiro(double valor) {
+
+	boolean sacar(double valor) {
 		if(this.saldo>=valor) {
 			this.saldo -= valor;
 			return true;
@@ -45,13 +40,13 @@ public class Conta {
 	}
 
 	boolean transfere(Conta destino, double valor) {
-		if(verificaSaldoNegativo(valor)) {
-			this.saldo -= valor;
+		if(this.sacar(valor)) {
 			destino.deposita(valor);
 			return true;
+		}else {
+			erroSaldo();
+			return false;
 		}
-		System.err.println();
-		return false;
 	}
 	
 	public double getSaldo() {

@@ -1,9 +1,15 @@
-package Banco;
+package Funcionario;
 
-public class Funcionario {
+public abstract class Funcionario {
+	//abstract é algo que não pode ser inicializado, tem que ser algo mais 
+	//especifico, como gerente, adm e etc..
 	private String nome;
 	private String cpf;
 	private double salario;
+	
+	Funcionario(String nome,String cpf){
+		this.nome = nome; this.cpf = cpf;
+	}
 	
 	public double getBonificacao() {
 		return this.salario * 0.05;
