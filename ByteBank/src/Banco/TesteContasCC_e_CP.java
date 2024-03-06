@@ -18,8 +18,8 @@ public class TesteContasCC_e_CP {
 		System.out.println("Mario " + ccMario.getSaldo());
 		ccMario.transfere(cpSuene, 857.25);
 		
-		System.out.println("Mario " + ccMario.getSaldo());
-		System.out.println("Suene " + cpSuene.getSaldo());
+		System.out.println("Mario: " + ccMario.getSaldo());
+		System.out.println("Suene: " + cpSuene.getSaldo());
 		
 	}
 }
