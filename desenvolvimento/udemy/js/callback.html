@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <script>
+        
+        var callbackSucesso = function(titulo, conteudo){
+            document.write('<h1>' + titulo + '</h1>' + "<br>" + "<hr>" + '<p style = color:tomato >' +conteudo + '</p>')
+        }
+
+        var callbackErro = function(){
+            document.write("erro na execução da requisição")
+        }
+
+        function exibirArtigo(id, callbackSucesso, callbackErro){
+            //recuperar id via http
+            if(true){
+                callbackSucesso("titulo do artigo", "conteudo do artigo recuperado de id: " + id);
+            }else{
+                callbackErro("erro ao recuperar os dados do artigo")
+            }
+        }
+        exibirArtigo(1,callbackSucesso,callbackErro)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap') ;
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body, html{
+    height: 100%;
+    font: 16px;
+    font-family: "Noto Sans", sans-serif;
+    background: white;
+}
+
+.conteudo{
+    padding: 50px 80px;
+    justify-content: center;
+    color: #777;
+
+}
+
+h1{
+    color: #111;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p{
+    line-height: 40px;
+    margin: 30px auto;
+}
+
+.caixa1, .caixa2, .caixa3, .caixa4{
+    position: relative;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*o cover cobre toda a area disponievl na tela*/
+    /*opacity: 0.8;*/
+    /*opacity define o nivel de opacidade da imagem*/
+    background-position: center;
+    background-attachment: fixed;/*a imagem fica fixa com a rolagem do mause*/
+}
+
+.conteudo-titulo{
+    position: absolute;
+    /* margin-top: 23%; tabm funcionaria do mesmo jeito e não precisa usar o position relative nas classes
+    caixa e no  conteudo titulo não seria necessario usar position absulote*/
+    top: 45%;
+    width: 100%;
+    /*como a caixa esta com  posição relative a o conteudo-titulo esta com a posição absolute
+    tab´me seria possivel utilizar as propriedasddes de deslocamento = top-rigth-left-bottom*/
+    opacity: 0.8;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.conteudo-titulo span.titulo{
+    /*coloca 5px de espaçamente entre os textos*/
+    letter-spacing: 5px;
+    font-size: 25px;
+    padding: 30px;
+    color: white;
+    background: #111;
+
+}
+
+.caixa1{
+    background-image: url(../imagens/imagem1.jpg);
+  
+}
+
+.caixa2{
+    background-image: url(../imagens/imagem2.jpg);
+}
+
+.caixa3{
+    background-image: url(../imagens/imagem3.jpg);
+}
+
+.caixa4{
+    background-image: url(../imagens/imagem4.jpg);
+}

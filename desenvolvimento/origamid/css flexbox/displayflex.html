@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+
+        body{
+            color: #333;
+        }
+
+        h1{
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .container{
+            max-width: 400px;
+            border: 1px solid red;
+            margin: 0px auto;
+        }
+
+        .item{
+            margin: 5px;
+            background: tomato;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        /*flex*/
+        .flex{
+            display: flex;/*elementos alinhados em linha*/
+        }
+
+        .flex-wrap{
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display: Block 1</h1>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h1>Display: flex 2 </h1>
+    <div class="container">
+        <div class="item">1flex1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h1>Display: flex3</h1>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3flex</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h1>Display: flex flex wrap 4</h1>
+    <div class="container flex flex-wrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4mod4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h1>Display: flex // flex item 1 (5)</h1>
+    <div class="container flex flex-wrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5triangulo</div>
+    </div>
+</body>
+</html>

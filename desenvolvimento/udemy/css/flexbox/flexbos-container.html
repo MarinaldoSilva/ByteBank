@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 1.5em;
+        }
+        .conteiner{
+            display: flex;/*por padrão os elementos ocupam o
+            espaço de acordo com o tamanho do elemento e utilizamos o 
+            flex-directioin com as propriedades colunm-colunm-reverse
+            row-row-reverse*/
+            border: 1px solid gray;
+            max-width: 300px;
+            flex-direction: row;
+            flex-wrap: wrap;/*
+            essa propriedade faz com que os itens dentro do container                 quebrem para a proxima linha se não ouver espaço
+            para os elementos no container
+           */
+            justify-content: space-around;
+            /*stretch - por padrão os itens preenchem toda a area até completar a altura
+            center - alinha ao contro / 
+            */
+            align-items: center;
+            /*alinhar elementos horizontalmente dentro de um container flexível
+            Existem várias opções de alinhamento disponíveis, como 
+            flex-start, flex-end, center, space-between e space-around
+            */
+        }
+        .item{
+            /*display: inline; ocupa espaço e acordo com o tamnho do conteudo*/
+            background: tomato;
+            margin: 5px;
+            flex: 1;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex-Box</h1>
+    <div class="conteiner">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6fsdfsdfdsfsdfsdsfsdf</div>
+        <div class="item">7</div>
+    </div>
+    
+</body>
+</html>

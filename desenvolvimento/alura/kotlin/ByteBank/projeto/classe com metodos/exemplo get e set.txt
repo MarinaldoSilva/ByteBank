@@ -1,0 +1,21 @@
+    fun getSaldo(): Double{
+       return this.saldo;
+    }
+    fun setSaldo(saldo: Double){
+        this.saldo = saldo;
+    }
+    fun getNumero():Int{
+        return this.numero;
+    }
+    fun setNumero(numero: Int){
+        this.numero = numero;
+    }
+    fun getTitular(): String{
+        return this.titular;
+    }
+    fun setTitular(titular: String){
+        this.titular = titular;
+    }
+    
+
+    properities=  é uma variavel que sempre vai ter acesso por meio de getts e setts proprios, não precisa implementar a função, já <i class="fa fa-expeditedssl" aria-hidden="true"></i>
